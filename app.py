@@ -15,11 +15,11 @@ with expander("Kvadrat tenglama dasturi"):
     ustun1,ustun2,ustun3 = columns(3)
 
     with ustun1:
-        a = sidebar.number_input("A ni kiriting",-10,10)
+        a = sidebar.slider("A ni kiriting",-10,10)
     with ustun2:
-        b = sidebar.number_input("B ni kiriting",-10,10)
+        b = sidebar.slider("B ni kiriting",-10,10)
     with ustun3:
-        c = sidebar.number_input("C ni kiriting",-10,10)
+        c = sidebar.slider("C ni kiriting",-10,10)
 
     D = b*b-4*a*c
     if D>0:
