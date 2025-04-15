@@ -5,7 +5,7 @@
 from streamlit import *
 from math import *
 
-markdown('# :rainbow[Latexda ishlaydigan dastur]')
+markdown('# :rainbow[Kvadrat tenglamaning ildizlarini hisoblash dasturi]')
 with expander("Kvadrat tenglama dasturi"):
     latex(r'''
         a\cdot x^2+b\cdot x+c=0
