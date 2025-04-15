@@ -4,6 +4,7 @@
 
 from streamlit import *
 from math import *
+import matplotlib.pyplot as plt
 
 markdown('# :rainbow[Kvadrat tenglamaning ildizlarini hisoblash dasturi]')
 latex(r'''
@@ -24,7 +25,20 @@ D = b*b-4*a*c
 if D>0:
     x1 = write(f"Birinchi yechim {(-b+sqrt(D))/2*a}")
     x2 = write(f"Ikkinchi yechim {(-b-sqrt(D))/2*a}")
+    header(f"{a}x^2+{b}x + {c} = 0")
+    x = [i for i in range(2001)]
+    y = [a*i+b*i+c for i in range(2001)]
+    import numpy as np
+
+    arr = np.random.normal(1, 1, size=100)
+    fig, ax = plt.subplots()
+    ax.hist(arr, bins=20)
+
+    pyplot(fig)
+    
 elif D==0:
     x = write(f"Yagona yechim {-b/2*a}")
+    header(f"{a}x^2+{b}x + {c} = 0")
 else:
     write("Yechim yo'q")
+    header(f"{a}x^2+{b}x + {c} = 0")
